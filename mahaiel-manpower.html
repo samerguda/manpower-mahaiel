@@ -1,150 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جدول العمال</title>
+    <title>أفعال OVTT في اللغة الهولندية</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
         }
         .container {
-            width: 80%;
-            margin: auto;
+            width: 100%;
+            max-width: 1000px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-radius: 10px;
+            overflow: hidden;
         }
-        h1 {
+        .header {
             text-align: center;
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 20px 15px;
+        }
+        .header h2 {
+            margin: 0 0 8px 0;
+            font-size: 22px;
+        }
+        .header p {
+            margin: 0;
+            font-size: 14px;
+            color: #bdc3c7;
+        }
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            text-align: right;
         }
         th, td {
-            border: 1px solid #000;
-            padding: 8px;
-            text-align: center;
+            padding: 12px 15px;
+            border-bottom: 1px solid #e9ecef;
         }
         th {
-            background-color: #d9d9d9;
+            background-color: #34495e;
+            color: #ffffff;
+            font-size: 15px;
+            white-space: nowrap;
         }
-        .button-container {
-            text-align: center;
-            margin: 20px 0;
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
         }
-        button {
-            margin: 0 10px;
-            padding: 10px 20px;
-            font-size: 16px;
+        tr:hover {
+            background-color: #f1f3f5;
+        }
+        .dutch {
+            direction: ltr;
+            text-align: left;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .infinitive {
+            color: #e67e22;
+        }
+
+        /* التصميم التفاعلي المخصص للهواتف المحمولة */
+        @media screen and (max-width: 650px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr {
+                margin-bottom: 12px;
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                background-color: #fff !important;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+                padding: 6px;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid #f1f3f5;
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 14px;
+            }
+            td:last-child {
+                border-bottom: none;
+            }
+            td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                color: #7f8c8d;
+                font-size: 13px;
+                margin-left: 10px;
+            }
+            .dutch {
+                direction: ltr;
+                text-align: right;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1> Manpower  </h1>
 
-        <div class="button-container">
-            <button onclick="window.print()">Print</button>
-            <button onclick="copyContent()">Copy Content</button>
-        </div>
-
+<div class="container">
+    <div class="header">
+        <h2>    A1 DUTCH OVTT (المستقبل في الماضي)</h2>
+        <p>الصيغة: zou / zouden + Infinitief</p>
+    </div>
+    <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th>رقم</th>
-                    <th>الاسم</th>
-                    <th>التخصص</th>
-                    <th>رقم الهاتف</th>
+                    <th>المصدر (Infinitief)</th>
+                    <th>المفرد (ik)</th>
+                    <th>الجمع (we)</th>
+                    <th>المعنى بالعربية</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>سمير ابو زيد فورمان</td>
-                    <td>مدني</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>عاكف</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>م أشرف اسفلت و اعمال نجارة و حدادة</td>
-                    <td></td>
-                    <td>5322467380</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>عاكب مساح</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>نايف مساح</td>
-                    <td></td>
-                    <td>539441310</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>عاصف مساح</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>كليم بوبيري</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>رفيق فورمان محطات</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>صدام مقاول رييب راب ٤٠</td>
-                    <td></td>
-                    <td>50733680</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>تايم كبير</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>ابو مبارك القحطاني</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>امين اعمال نظافة و ميكانيكا</td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">zijn</td><td class="dutch" data-label="المفرد (ik)">ik zou zijn</td><td class="dutch" data-label="الجمع (we)">we zouden zijn</td><td data-label="المعنى">كنتُ سأكون / كنا سنكون</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">hebben</td><td class="dutch" data-label="المفرد (ik)">ik zou hebben</td><td class="dutch" data-label="الجمع (we)">we zouden hebben</td><td data-label="المعنى">كان سيكون لديّ / لدينا</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">gaan</td><td class="dutch" data-label="المفرد (ik)">ik zou gaan</td><td class="dutch" data-label="الجمع (we)">we zouden gaan</td><td data-label="المعنى">كنتُ سأذهب / كنا سنذهب</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">komen</td><td class="dutch" data-label="المفرد (ik)">ik zou komen</td><td class="dutch" data-label="الجمع (we)">we zouden komen</td><td data-label="المعنى">كنتُ سآتي / كنا سنأتي</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">wonen</td><td class="dutch" data-label="المفرد (ik)">ik zou wonen</td><td class="dutch" data-label="الجمع (we)">we zouden wonen</td><td data-label="المعنى">كنتُ سأسكن / كنا سنسكن</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">werken</td><td class="dutch" data-label="المفرد (ik)">ik zou werken</td><td class="dutch" data-label="الجمع (we)">we zouden werken</td><td data-label="المعنى">كنتُ سأعمل / كنا سنعمل</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">leren</td><td class="dutch" data-label="المفرد (ik)">ik zou leren</td><td class="dutch" data-label="الجمع (we)">we zouden leren</td><td data-label="المعنى">كنتُ سأتعلّم / كنا سنتعلّم</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">studeren</td><td class="dutch" data-label="المفرد (ik)">ik zou studeren</td><td class="dutch" data-label="الجمع (we)">we zouden studeren</td><td data-label="المعنى">كنتُ سأدرس / كنا سندرس</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">lezen</td><td class="dutch" data-label="المفرد (ik)">ik zou lezen</td><td class="dutch" data-label="الجمع (we)">we zouden lezen</td><td data-label="المعنى">كنتُ سأقرأ / كنا سنقرأ</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">schrijven</td><td class="dutch" data-label="المفرد (ik)">ik zou schrijven</td><td class="dutch" data-label="الجمع (we)">we zouden schrijven</td><td data-label="المعنى">كنتُ سأكتب / كنا سنكتب</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">spreken</td><td class="dutch" data-label="المفرد (ik)">ik zou spreken</td><td class="dutch" data-label="الجمع (we)">we zouden spreken</td><td data-label="المعنى">كنتُ سأتحدث / كنا سنتحدث</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">zeggen</td><td class="dutch" data-label="المفرد (ik)">ik zou zeggen</td><td class="dutch" data-label="الجمع (we)">we zouden zeggen</td><td data-label="المعنى">كنتُ سأقول / كنا سنقول</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">luisteren</td><td class="dutch" data-label="المفرد (ik)">ik zou luisteren</td><td class="dutch" data-label="الجمع (we)">we zouden luisteren</td><td data-label="المعنى">كنتُ سأستمع / كنا سنستمع</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">horen</td><td class="dutch" data-label="المفرد (ik)">ik zou horen</td><td class="dutch" data-label="الجمع (we)">we zouden horen</td><td data-label="المعنى">كنتُ سأسكع / كنا سنسمع</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">kijken</td><td class="dutch" data-label="المفرد (ik)">ik zou kijken</td><td class="dutch" data-label="الجمع (we)">we zouden kijken</td><td data-label="المعنى">كنتُ سأشاهد / كنا سنشاهد</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">zien</td><td class="dutch" data-label="المفرد (ik)">ik zou zien</td><td class="dutch" data-label="الجمع (we)">we zouden zien</td><td data-label="المعنى">كنتُ سأرى / كنا سنرى</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">eten</td><td class="dutch" data-label="المفرد (ik)">ik zou eten</td><td class="dutch" data-label="الجمع (we)">we zouden eten</td><td data-label="المعنى">كنتُ سآكل / كنا سنأكل</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">drinken</td><td class="dutch" data-label="المفرد (ik)">ik zou drinken</td><td class="dutch" data-label="الجمع (we)">we zouden drinken</td><td data-label="المعنى">كنتُ سأشرب / كنا سنشرب</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">koken</td><td class="dutch" data-label="المفرد (ik)">ik zou koken</td><td class="dutch" data-label="الجمع (we)">we zouden koken</td><td data-label="المعنى">كنتُ سأطبخ / كنا سنطبخ</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">slapen</td><td class="dutch" data-label="المفرد (ik)">ik zou slapen</td><td class="dutch" data-label="الجمع (we)">we zouden slapen</td><td data-label="المعنى">كنتُ سأنام / كنا سننام</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">wakker worden</td><td class="dutch" data-label="المفرد (ik)">ik zou wakker worden</td><td class="dutch" data-label="الجمع (we)">we zouden wakker worden</td><td data-label="المعنى">كنتُ سأستيقظ / كنا سنستيقظ</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">douchen</td><td class="dutch" data-label="المفرد (ik)">ik zou douchen</td><td class="dutch" data-label="الجمع (we)">we zouden douchen</td><td data-label="المعنى">كنتُ سأستحم / كنا سنستحم</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">wassen</td><td class="dutch" data-label="المفرد (ik)">ik zou wassen</td><td class="dutch" data-label="الجمع (we)">we zouden wassen</td><td data-label="المعنى">كنتُ سأغسل / كنا سنغسل</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">zich aankleden</td><td class="dutch" data-label="المفرد (ik)">ik zou me aankleden</td><td class="dutch" data-label="الجمع (we)">we zouden ons aankleden</td><td data-label="المعنى">كنتُ سأرتدي ملابسي / كنا سنرتدي ملابسنا</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">openen</td><td class="dutch" data-label="المفرد (ik)">ik zou openen</td><td class="dutch" data-label="الجمع (we)">we zouden openen</td><td data-label="المعنى">كنتُ سأفتح / كنا سنفتح</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">sluiten</td><td class="dutch" data-label="المفرد (ik)">ik zou sluiten</td><td class="dutch" data-label="الجمع (we)">we zouden sluiten</td><td data-label="المعنى">كنتُ سأغلق / كنا سنغلق</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">kopen</td><td class="dutch" data-label="المفرد (ik)">ik zou kopen</td><td class="dutch" data-label="الجمع (we)">we zouden kopen</td><td data-label="المعنى">كنتُ سأشتري / كنا سنشتري</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">verkopen</td><td class="dutch" data-label="المفرد (ik)">ik zou verkopen</td><td class="dutch" data-label="الجمع (we)">we zouden verkopen</td><td data-label="المعنى">كنتُ سأبيع / كنا سنبيع</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">betalen</td><td class="dutch" data-label="المفرد (ik)">ik zou betalen</td><td class="dutch" data-label="الجمع (we)">we zouden betalen</td><td data-label="المعنى">كنتُ سأدفع / كنا سندفع</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">geven</td><td class="dutch" data-label="المفرد (ik)">ik zou geven</td><td class="dutch" data-label="الجمع (we)">we zouden geven</td><td data-label="المعنى">كنتُ سأعطي / كنا سنعطي</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">krijgen</td><td class="dutch" data-label="المفرد (ik)">ik zou krijgen</td><td class="dutch" data-label="الجمع (we)">we zouden krijgen</td><td data-label="المعنى">كنتُ سأحصل على / كنا سنحصل على</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">nemen</td><td class="dutch" data-label="المفرد (ik)">ik zou nemen</td><td class="dutch" data-label="الجمع (we)">we zouden nemen</td><td data-label="المعنى">كنتُ سآخذ / كنا سنأخذ</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">brengen</td><td class="dutch" data-label="المفرد (ik)">ik zou brengen</td><td class="dutch" data-label="الجمع (we)">we zouden brengen</td><td data-label="المعنى">كنتُ سأحضر / كنا سنحضر</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">maken</td><td class="dutch" data-label="المفرد (ik)">ik zou maken</td><td class="dutch" data-label="الجمع (we)">we zouden maken</td><td data-label="المعنى">كنتُ سأصنع / كنا سنصنع</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">doen</td><td class="dutch" data-label="المفرد (ik)">ik zou doen</td><td class="dutch" data-label="الجمع (we)">we zouden doen</td><td data-label="المعنى">كنتُ سأفعل / كنا سنفعل</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">helpen</td><td class="dutch" data-label="المفرد (ik)">ik zou helpen</td><td class="dutch" data-label="الجمع (we)">we zouden helpen</td><td data-label="المعنى">كنتُ سأسعد / كنا سنساعد</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">wachten</td><td class="dutch" data-label="المفرد (ik)">ik zou wachten</td><td class="dutch" data-label="الجمع (we)">we zouden wachten</td><td data-label="المعنى">كنتُ سأنتظر / كنا سننتظر</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">beginnen</td><td class="dutch" data-label="المفرد (ik)">ik zou beginnen</td><td class="dutch" data-label="الجمع (we)">we zouden beginnen</td><td data-label="المعنى">كنتُ سأبدأ / كنا سنبدأ</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">eindigen</td><td class="dutch" data-label="المفرد (ik)">ik zou eindigen</td><td class="dutch" data-label="الجمع (we)">we zouden eindigen</td><td data-label="المعنى">كنتُ سأنهي / كنا سننهي</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">blijven</td><td class="dutch" data-label="المفرد (ik)">ik zou blijven</td><td class="dutch" data-label="الجمع (we)">we zouden blijven</td><td data-label="المعنى">كنتُ سأبقى / كنا سنبقى</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">vinden</td><td class="dutch" data-label="المفرد (ik)">ik zou vinden</td><td class="dutch" data-label="الجمع (we)">we zouden vinden</td><td data-label="المعنى">كنتُ سأجد / كنا سنجد</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">zoeken</td><td class="dutch" data-label="المفرد (ik)">ik zou zoeken</td><td class="dutch" data-label="الجمع (we)">we zouden zoeken</td><td data-label="المعنى">كنتُ سأبحث / كنا سنبحث</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">vragen</td><td class="dutch" data-label="المفرد (ik)">ik zou vragen</td><td class="dutch" data-label="الجمع (we)">we zouden vragen</td><td data-label="المعنى">كنتُ سأسأل / كنا سنسأل</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">antwoorden</td><td class="dutch" data-label="المفرد (ik)">ik zou antwoorden</td><td class="dutch" data-label="الجمع (we)">we zouden antwoorden</td><td data-label="المعنى">كنتُ سأجيب / كنا سنجيب</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">kennen</td><td class="dutch" data-label="المفرد (ik)">ik zou kennen</td><td class="dutch" data-label="الجمع (we)">we zouden kennen</td><td data-label="المعنى">كنتُ سأعرف / كنا سنعرف</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">weten</td><td class="dutch" data-label="المفرد (ik)">ik zou weten</td><td class="dutch" data-label="الجمع (we)">we zouden weten</td><td data-label="المعنى">كنتُ سأعلم / كنا سنعلم</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">begrijpen</td><td class="dutch" data-label="المفرد (ik)">ik zou begrijpen</td><td class="dutch" data-label="الجمع (we)">we zouden begrijpen</td><td data-label="المعنى">كنتُ سأفهم / كنا سنفهم</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">vergeten</td><td class="dutch" data-label="المفرد (ik)">ik zou vergeten</td><td class="dutch" data-label="الجمع (we)">we zouden vergeten</td><td data-label="المعنى">كنتُ سأنسى / كنا سننسى</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">onthouden</td><td class="dutch" data-label="المفرد (ik)">ik zou onthouden</td><td class="dutch" data-label="الجمع (we)">we zouden onthouden</td><td data-label="المعنى">كنتُ سأتذكر / كنا سنتذكر</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">reizen</td><td class="dutch" data-label="المفرد (ik)">ik zou reizen</td><td class="dutch" data-label="الجمع (we)">we zouden reizen</td><td data-label="المعنى">كنتُ سأسافر / كنا سننسافر</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">rijden</td><td class="dutch" data-label="المفرد (ik)">ik zou rijden</td><td class="dutch" data-label="الجمع (we)">we zouden rijden</td><td data-label="المعنى">كنتُ سأقود / كنا سنقود</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">fietsen</td><td class="dutch" data-label="المفرد (ik)">ik zou fietsen</td><td class="dutch" data-label="الجمع (we)">we zouden fietsen</td><td data-label="المعنى">كنتُ سأركب الدراجة / كنا سنركب الدراجة</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">lopen</td><td class="dutch" data-label="المفرد (ik)">ik zou lopen</td><td class="dutch" data-label="الجمع (we)">we zouden lopen</td><td data-label="المعنى">كنتُ سأمشي / كنا سنمشي</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">rennen</td><td class="dutch" data-label="المفرد (ik)">ik zou rennen</td><td class="dutch" data-label="الجمع (we)">we zouden rennen</td><td data-label="المعنى">كنتُ سأركض / كنا سنركض</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">zitten</td><td class="dutch" data-label="المفرد (ik)">ik zou zitten</td><td class="dutch" data-label="الجمع (we)">we zouden zitten</td><td data-label="المعنى">كنتُ سأجلس / كنا سنجلس</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">staan</td><td class="dutch" data-label="المفرد (ik)">ik zou staan</td><td class="dutch" data-label="الجمع (we)">we zouden staan</td><td data-label="المعنى">كنتُ سأقف / كنا سنقف</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">liggen</td><td class="dutch" data-label="المفرد (ik)">ik zou liggen</td><td class="dutch" data-label="الجمع (we)">we zouden liggen</td><td data-label="المعنى">كنتُ سأستلقي / كنا سنستلقي</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">spelen</td><td class="dutch" data-label="المفرد (ik)">ik zou spelen</td><td class="dutch" data-label="الجمع (we)">we zouden spelen</td><td data-label="المعنى">كنتُ سألعب / كنا سنلعب</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">zwemmen</td><td class="dutch" data-label="المفرد (ik)">ik zou zwemmen</td><td class="dutch" data-label="الجمع (we)">we zouden zwemmen</td><td data-label="المعنى">كنتُ سأسبح / كنا سنسبح</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">zingen</td><td class="dutch" data-label="المفرد (ik)">ik zou zingen</td><td class="dutch" data-label="الجمع (we)">we zouden zingen</td><td data-label="المعنى">كنتُ سأغني / كنا سنغني</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">dansen</td><td class="dutch" data-label="المفرد (ik)">ik zou dansen</td><td class="dutch" data-label="الجمع (we)">we zouden dansen</td><td data-label="المعنى">كنتُ سأرقص / كنا سنرقص</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">bellen</td><td class="dutch" data-label="المفرد (ik)">ik zou bellen</td><td class="dutch" data-label="الجمع (we)">we zouden bellen</td><td data-label="المعنى">كنتُ سأتصل / كنا سنتصل</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">sturen</td><td class="dutch" data-label="المفرد (ik)">ik zou sturen</td><td class="dutch" data-label="الجمع (we)">we zouden sturen</td><td data-label="المعنى">كنتُ سأرسل / كنا سنرسل</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">ontmoeten</td><td class="dutch" data-label="المفرد (ik)">ik zou ontmoeten</td><td class="dutch" data-label="الجمع (we)">we zouden ontmoeten</td><td data-label="المعنى">كنتُ سأقابل / كنا سنقابل</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">houden van</td><td class="dutch" data-label="المفرد (ik)">ik zou houden van</td><td class="dutch" data-label="الجمع (we)">we zouden houden van</td><td data-label="المعنى">كنتُ سأحب / كنا سنحب</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">proberen</td><td class="dutch" data-label="المفرد (ik)">ik zou proberen</td><td class="dutch" data-label="الجمع (we)">we zouden proberen</td><td data-label="المعنى">كنتُ سأحاول / كنا سنحاول</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">kiezen</td><td class="dutch" data-label="المفرد (ik)">ik zou kiezen</td><td class="dutch" data-label="الجمع (we)">we zouden kiezen</td><td data-label="المعنى">كنتُ سأختار / كنا سنختار</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">gebruiken</td><td class="dutch" data-label="المفرد (ik)">ik zou gebruiken</td><td class="dutch" data-label="الجمع (we)">we zouden gebruiken</td><td data-label="المعنى">كنتُ سأستخدم / كنا سنستخدم</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">openen</td><td class="dutch" data-label="المفرد (ik)">ik zou openen</td><td class="dutch" data-label="الجمع (we)">we zouden openen</td><td data-label="المعنى">كنتُ سأفتح / كنا سنفتح</td></tr>
+                <tr><td class="dutch infinitive" data-label="المصدر">antwoorden</td><td class="dutch" data-label="المفرد (ik)">ik zou antwoorden</td><td class="dutch" data-label="الجمع (we)">we zouden antwoorden</td><td data-label="المعنى">كنتُ سأجيب / كنا سنجيب</td></tr>
             </tbody>
         </table>
     </div>
+</div>
 
-    <script>
-        function copyContent() {
-            const el = document.createElement('textarea');
-            el.value = document.querySelector('.container').innerText;
-            document.body.appendChild(el);
-            el.select();
-            document.execCommand('copy');
-            document.body.removeChild(el);
-            alert('Content copied to clipboard');
-        }
-    </script>
 </body>
 </html>
